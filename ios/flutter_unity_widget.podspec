@@ -3,7 +3,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_unity_widget'
-  s.version          = '0.0.1'
+  s.version          = '2.0.0'
   s.summary          = 'Flutter unity 3D widget for embedding unity in flutter'
   s.description      = <<-DESC
 Flutter unity 3D widget for embedding unity in flutter
@@ -18,12 +18,13 @@ Flutter unity 3D widget for embedding unity in flutter
   s.frameworks = 'UnityFramework'
 
   s.ios.deployment_target = '8.0'
-     spec.xcconfig = {
+  s.xcconfig = {
     'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/../.symlinks/plugins/flutter_unity_widget/ios" "${PODS_ROOT}/../.symlinks/flutter/ios-release" "${PODS_CONFIGURATION_BUILD_DIR}"',
     'OTHER_LDFLAGS' => '$(inherited) -framework UnityFramework ${PODS_LIBRARIES}'
   }
 
    # Extract precompiled framework from tarball before compiling
-   spec.vendored_frameworks = "UnityFramework.framework"
-  
+   #spec.prepare_command     = "tar -xvjf UnityFramework.tar.bz2"
+   s.vendored_frameworks = "UnityFramework.framework"
+
 end

@@ -18,7 +18,11 @@ rootProject.allprojects {
         jcenter()
 
         // DO NOT MODIFY
-        // BUILD_ADD_UNITY_LIBS
+        
+        flatDir {
+            dirs "${project(':unityLibrary').projectDir}/libs"
+        }
+
 
         // FOR DEV ONLY
         /*flatDir {
