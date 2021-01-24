@@ -39,6 +39,7 @@ build/
 android/UnityExport/
 
 #example/
+unity/*
 unity/DemoApp/Builds/
 unity/DemoApp/Library/
 unity/DemoApp/Logs/
