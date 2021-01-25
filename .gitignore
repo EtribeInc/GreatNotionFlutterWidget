@@ -36,14 +36,6 @@ node_modules/
 .pub/
 build/
 
-android/UnityExport/
-
-#example/
-unity/DemoApp/Builds/
-unity/DemoApp/Library/
-unity/DemoApp/Logs/
-unity/DemoApp/Temp/
-
 # Android related
 **/android/**/gradle-wrapper.jar
 **/android/.gradle
@@ -77,6 +69,7 @@ unity/DemoApp/Temp/
 **/ios/Flutter/app.zip
 **/ios/Flutter/flutter_assets/
 **/ios/ServiceDefinitions.json
+**/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
 
 # Exceptions to above rules.
@@ -88,3 +81,4 @@ unity/DemoApp/Temp/
 
 unity/GreatNotionAR
 ios_xcode/UnityLibrary
+/ios/UnityFramework.framework.dSYM/
