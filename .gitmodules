@@ -1,0 +1,3 @@
+[submodule "unity/GreatNotionAR"]
+	path = unity/GreatNotionAR
+	url = git@github.com:EtribeInc/GreatNotionAR.git
