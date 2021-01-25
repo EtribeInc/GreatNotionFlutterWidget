@@ -39,7 +39,6 @@ build/
 android/UnityExport/
 
 #example/
-unity/*
 unity/DemoApp/Builds/
 unity/DemoApp/Library/
 unity/DemoApp/Logs/
@@ -87,6 +86,5 @@ unity/DemoApp/Temp/
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 
-unity/ARDemoApp/test
 unity/GreatNotionAR
 ios_xcode/UnityLibrary
