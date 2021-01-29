@@ -86,7 +86,6 @@
 		<type fullname="FadePlaneOnBoundaryChange" preserve="nothing"/>
 		<type fullname="FlutterApp" preserve="nothing"/>
 		<type fullname="FlutterBridge" preserve="nothing"/>
-		<type fullname="GameManager" preserve="nothing"/>
 		<type fullname="GroundCollider" preserve="nothing"/>
 		<type fullname="HangOn" preserve="nothing"/>
 		<type fullname="Lean.Touch.LeanPinchScale" preserve="nothing"/>
@@ -99,8 +98,6 @@
 		<type fullname="Pixelplacement.SplineTangent" preserve="nothing"/>
 		<type fullname="PlaceOnPlane" preserve="nothing"/>
 		<type fullname="PlaneDetectionController" preserve="nothing"/>
-		<type fullname="Rotate" preserve="nothing"/>
-		<type fullname="SceneLoader" preserve="nothing"/>
 		<type fullname="Superstar" preserve="nothing"/>
 		<type fullname="SuperstarCamera" preserve="nothing"/>
 		<type fullname="SuperstarGame" preserve="nothing"/>
@@ -173,5 +170,8 @@
 		<type fullname="UnityEngine.UI.ScrollRect" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Scrollbar" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="com.unity.multiplayer-hlapi.Runtime">
+		<type fullname="UnityEngine.Networking.NetworkCallbacks" preserve="nothing"/>
 	</assembly>
 </linker>
