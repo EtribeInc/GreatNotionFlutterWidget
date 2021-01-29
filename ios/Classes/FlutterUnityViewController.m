@@ -107,6 +107,10 @@ NSMutableArray * gFuwViews;
         }];
         [GetAppController() setUnitySceneLoadedHandler:^(const char *name, const int *buildIndex, const bool *isLoaded, const bool *isValid)
         {
+            NSLog(@"**************************************");
+            NSLog(@"******setUnitySceneLoadedHandler******");
+            NSLog(@"******            %s           ******", [NSString stringWithUTF8String:name]);
+            NSLog(@"**************************************");
             NSDictionary *addObject = @{
                 @"name" : [NSString stringWithUTF8String:name],
                 @"buildIndex" : [NSNumber numberWithInt:buildIndex],
