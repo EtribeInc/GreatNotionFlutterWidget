@@ -4,12 +4,6 @@
 
 #include "RenderPluginDelegate.h"
 
-// Added by https://github.com/juicycleff/flutter-unity-view-widget
-@protocol UnityEventListener <NSObject>
-- (void)onSceneLoaded:(NSString *)name buildIndex:(NSInteger *)bIndex loaded:(bool *)isLoaded valid:(bool *)IsValid;
-- (void)onMessage:(NSString *)message;
-@end
-
 @class UnityView;
 @class UnityViewControllerBase;
 @class DisplayConnection;
@@ -56,9 +50,6 @@ __attribute__ ((visibility("default")))
 // this is done to make sure that activity indicator animation starts before blocking loading
 - (void)startUnity:(UIApplication*)application;
 
-// Added by https://github.com/juicycleff/flutter-unity-view-widget
-+ (UnityAppController*)GetAppController;
-
 // this is a part of UIApplicationDelegate protocol starting with ios5
 // setter will be generated empty
 @property (retain, nonatomic) UIWindow* window;
@@ -76,8 +67,7 @@ __attribute__ ((visibility("default")))
 
 @property (nonatomic, retain) id                            renderDelegate;
 @property (nonatomic, copy)                                 void(^quitHandler)();
-@property (nonatomic, copy)                                 void(^unitySceneLoadedHandler)(const char* name, const int* buildIndex, const bool* isLoaded, const bool* IsValid);
-@property (nonatomic, copy)                                 void(^unityMessageHandler)(const char* message);
+
 @end
 
 // accessing app controller
@@ -86,14 +76,7 @@ extern "C" {
 #endif
 
 extern UnityAppController* _UnityAppController;
-// extern UnityAppController* GetAppController();
-// }
-
-// Added by https://github.com/juicycleff/flutter-unity-view-widget
-static inline UnityAppController* GetAppController()
-{
-    return [UnityAppController GetAppController];
-}
+extern UnityAppController* GetAppController();
 
 #ifdef __cplusplus
 } // extern "C"
