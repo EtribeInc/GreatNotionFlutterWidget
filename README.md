@@ -23,7 +23,7 @@ The release is based on git tags
     ```
 
 ## Integration
-## Installation
+### Installation
  1. First depend on the library by adding this to your packages `pubspec.yaml`:
 
     ```yaml
@@ -34,7 +34,7 @@ The release is based on git tags
             ref: v1.0.0
     ```
 
-# Setup iOS
+### Setup iOS
 
 Now lets initialize unity in Flutter iOS project. Go to `ios/Runner/AppDelegate.swift` and update it
 
@@ -58,7 +58,7 @@ import flutter_unity_widget
 ```
 <br />
 
-# Setup Android
+### Setup Android
 
 Now lets initialize unity in Flutter Android project. Go to `android/settings.gradle` and update it
 
