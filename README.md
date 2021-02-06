@@ -1,74 +1,95 @@
 # flutter_unity_widget
 
+## Develop
+### Setup Unity Project
+1. Initialize git submodule
+    ```bash
+        $ git submodule init 
+    ```
+2. Open the project in path (`unity/GreatNotionAR`) in the unity app
+3. In unity from the file menu, select `Flutter/Export Android Plugin` for Andorid export and `Flutter/Export iOS Plugin`.
+4. Finally run this command in the soot of the repository
+    ```bash
+        $ sh build-ios.sh
+    ```
+
+### Make a release
+The release is based on git tags
+
+1. Stash your git changes and create a git tag, then push the tags to github
+    ```bash
+        $ git tag v1.0.0-example
+        $ git push tag v1.0.0-example
+    ```
+
+## Integration
 ## Installation
- First depend on the library by adding this to your packages `pubspec.yaml`:
+ 1. First depend on the library by adding this to your packages `pubspec.yaml`:
 
-```yaml
-dependencies:
-  flutter_unity_widget: ^4.0.0-beta
-```
+    ```yaml
+    dependencies:
+      flutter_unity_widget:
+        git:
+            url: https://github.com/EtribeInc/GreatNotionFlutterWidget
+            ref: v1.0.0
+    ```
 
-Now inside your Dart code you can import it.
+# Setup iOS
 
-```dart
-import 'package:flutter_unity_widget/flutter_unity_widget.dart';
+Now lets initialize unity in Flutter iOS project. Go to `ios/Runner/AppDelegate.swift` and update it
+
+```swift
+import UIKit
+import Flutter
+import flutter_unity_widget
+
+@UIApplicationMain
+@objc class AppDelegate: FlutterAppDelegate, PickedImageAcceptable, PayTokenValidatable {
+    
+    override func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions
+        launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // Init flutter unity
+        InitUnityIntegrationWithOptions(argc: CommandLine.argc, argv: CommandLine.unsafeArgv, launchOptions)
+    }
+}
 ```
 <br />
 
-## Preview
+# Setup Android
 
-30 fps gifs, showcasing communication between Flutter and Unity:
+Now lets initialize unity in Flutter Android project. Go to `android/settings.gradle` and update it
 
-![gif](https://github.com/juicycleff/flutter-unity-view-widget/blob/master/files/preview_android.gif?raw=true)
-![gif](https://github.com/juicycleff/flutter-unity-view-widget/blob/master/files/preview_ios.gif?raw=true)
+```gradle
+include ':app'
 
+def localPropertiesFile = new File(rootProject.projectDir, "local.properties")
+def properties = new Properties()
+
+assert localPropertiesFile.exists()
+localPropertiesFile.withReader("UTF-8") { reader -> properties.load(reader) }
+
+def flutterProjectRoot = rootProject.projectDir.parentFile.toPath()
+
+def plugins = new Properties()
+def pluginsFile = new File(flutterProjectRoot.toFile(), '.flutter-plugins')
+if (pluginsFile.exists()) {
+    pluginsFile.withReader('UTF-8') { reader -> plugins.load(reader) }
+}
+
+plugins.each { name, path ->
+    def pluginDirectory = flutterProjectRoot.resolve(path).resolve('android').toFile()
+    include ":$name"
+    project(":$name").projectDir = pluginDirectory
+
+    if (name == 'flutter_unity_widget') {
+        include ":unityLibrary"
+        project(":unityLibrary").projectDir=flutterProjectRoot.resolve(path).resolve('android/unityLibrary').toFile()
+    }
+}
+```
 <br />
 
-## Setup Project
-For this, there is also a video tutorial, which you can find a [here](https://www.youtube.com/watch?v=exNPmv_7--Q).
-
-### Add Unity Project
-
-1. Create an unity project, Example: 'UnityDemoApp'.
-2. Create a folder named `unity` in flutter project folder.
-2. Move unity project folder to `unity` folder.
-
-Now your project files should look like this.
-
-```
-.
-├── android
-├── ios
-├── lib
-├── test
-├── unity
-│   └── <Your Unity Project>    // Example: UnityDemoApp
-├── pubspec.yml
-├── README.md
-```
-
-### Configure Player Settings
-
-1. First Open Unity Project.
-
-2. Click Menu: File => Build Settings
-
-Be sure you have at least one scene added to your build.
-
-3. => Player Settings
-
-   **Android Platform**:
-    1. Change `Scripting Backend` to IL2CPP.
-
-    2. Mark the following `Target Architectures` :
-        - ARMv7        ✅
-        - ARM64        ✅
-        - x86          ✅ (In Unity Version 2019.2+, this feature is not avaliable due to the lack of Unity Official Support)
-
-<img src="https://raw.githubusercontent.com/juicycleff/flutter-unity-view-widget/master/files/Screenshot%202019-03-27%2007.31.55.png" width="400" />
-
-   **iOS Platform**:
-    1. Depending on where you want to test or run your app, (simulator or physical device), you should select the appropriate SDK on `Target SDK`.
-      <br />
-
-<br />
+Now you can run your build
