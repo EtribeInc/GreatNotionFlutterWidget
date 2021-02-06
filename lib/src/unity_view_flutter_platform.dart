@@ -28,7 +28,7 @@ abstract class UnityViewFlutterPlatform extends PlatformInterface {
   }
 
   Future<bool> isReady({@required int unityId}) async {
-    throw UnimplementedError('isReady() has not been implemented.');
+    throw UnimplementedError('init() has not been implemented.');
   }
 
   Future<bool> isPaused({@required int unityId}) async {
@@ -80,7 +80,7 @@ abstract class UnityViewFlutterPlatform extends PlatformInterface {
     throw UnimplementedError('unloadPlayer() has not been implemented.');
   }
 
-  Future<void> quitPlayer({@required int unityId, bool silent}) async {
+  Future<void> quitPlayer({@required int unityId}) async {
     throw UnimplementedError('quitPlayer() has not been implemented.');
   }
 

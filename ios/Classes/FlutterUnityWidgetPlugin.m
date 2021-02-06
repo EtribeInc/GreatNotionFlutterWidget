@@ -1,32 +1,32 @@
-//
-//  FlutterUnityWidgetPlugin.m
-//  FlutterUnityWidgetPlugin
-//
-//  Created by Kris Pypen on 8/1/19.
-//  Updated by Rex Raphael on 8/27/2020.
-//
-
 #import "FlutterUnityWidgetPlugin.h"
-#import "FlutterUnityView.h"
+#import <Foundation/Foundation.h>
+#if __has_include(<flutter_unity_widget/flutter_unity_widget-Swift.h>)
+#import <flutter_unity_widget/flutter_unity_widget-Swift.h>
+#else
+// Support project import fallback if the generated compatibility header
+// is not copied when this plugin is created as a library.
+// https://forums.swift.org/t/swift-static-libraries-dont-copy-generated-objective-c-header/19816
+#import "flutter_unity_widget-Swift.h"
+#endif
+
+void OnUnitySceneLoaded(const char* name, const int* buildIndex, const bool* isLoaded, const bool* isValid)
+{
+    [UnityPlayerUtils unitySceneLoadedHandlerWithName:name buildIndex:buildIndex isLoaded:isLoaded isValid:isValid];
+}
+    
+void OnUnityMessage(const char* message)
+{
+    [UnityPlayerUtils unityMessageHandler:message];
+}
 
 @implementation FlutterUnityWidgetPlugin {
-    NSObject<FlutterPluginRegistrar>* _registrar;
-    FlutterMethodChannel* _channel;
-    NSMutableDictionary* _mapControllers;
+ NSObject<FlutterPluginRegistrar>* _registrar;
+ FlutterMethodChannel* _channel;
+ NSMutableDictionary* _mapControllers;
 }
 
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-    FLTUnityViewFactory* fuviewFactory = [[FLTUnityViewFactory alloc] initWithRegistrar:registrar];
-    [registrar registerViewFactory:fuviewFactory withId:@"plugins.xraph.com/unity_view" gestureRecognizersBlockingPolicy:
-     FlutterPlatformViewGestureRecognizersBlockingPolicyWaitUntilTouchesEnded];
+  [SwiftFlutterUnityWidgetPlugin registerWithRegistrar:registrar];
 }
 
-- (FLTUnityViewController*)mapFromCall:(FlutterMethodCall*)call error:(FlutterError**)error {
-    id unityId = call.arguments[@"unity"];
-    FLTUnityViewController* controller = _mapControllers[unityId];
-    if (!controller && error) {
-    *error = [FlutterError errorWithCode:@"unknown_map" message:nil details:unityId];
-    }
-    return controller;
-}
 @end

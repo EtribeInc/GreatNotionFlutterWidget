@@ -1,3 +1,6 @@
 [submodule "unity/GreatNotionAR"]
 	path = unity/GreatNotionAR
 	url = git@github.com:EtribeInc/GreatNotionAR.git
+[submodule "unity/--force"]
+	path = unity/--force
+	url = git@github.com:EtribeInc/GreatNotionAR.git
