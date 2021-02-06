@@ -19,7 +19,7 @@ The release is based on git tags
 1. Stash your git changes and create a git tag, then push the tags to github
     ```bash
         $ git tag v1.0.0-example
-        $ git push tag v1.0.0-example
+        $ git push origin tag v1.0.0-example
     ```
 
 ## Integration
