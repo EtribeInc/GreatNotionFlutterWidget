@@ -7,7 +7,7 @@
 //
 
 #import <Flutter/Flutter.h>
-#import "FlutterUnityViewController.h"
 
 @interface FlutterUnityWidgetPlugin : NSObject<FlutterPlugin>
 @end
+
