@@ -78,10 +78,8 @@
 		<type fullname="AudioSyncMouthOpen" preserve="nothing"/>
 		<type fullname="Character" preserve="nothing"/>
 		<type fullname="CharacterAccessoryUI" preserve="nothing"/>
-		<type fullname="CharacterIdleState" preserve="nothing"/>
 		<type fullname="CharacterViewerApp" preserve="nothing"/>
 		<type fullname="ClimbIdleState" preserve="nothing"/>
-		<type fullname="ExitCanvas" preserve="nothing"/>
 		<type fullname="FIMSpace.FLook.FLookAnimator" preserve="nothing"/>
 		<type fullname="FadePlaneOnBoundaryChange" preserve="nothing"/>
 		<type fullname="FlutterApp" preserve="nothing"/>
@@ -101,7 +99,6 @@
 		<type fullname="Superstar" preserve="nothing"/>
 		<type fullname="SuperstarCamera" preserve="nothing"/>
 		<type fullname="SuperstarGame" preserve="nothing"/>
-		<type fullname="TestFlightApp" preserve="nothing"/>
 		<type fullname="TreeBranch" preserve="nothing"/>
 		<type fullname="TreeSection" preserve="nothing"/>
 		<type fullname="VideoRecorder" preserve="nothing"/>
@@ -162,7 +159,6 @@
 		<type fullname="UnityEngine.UI.CanvasScaler" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.ContentSizeFitter" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.GraphicRaycaster" preserve="nothing"/>
-		<type fullname="UnityEngine.UI.GridLayoutGroup" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.HorizontalLayoutGroup" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Mask" preserve="nothing"/>
@@ -170,8 +166,5 @@
 		<type fullname="UnityEngine.UI.ScrollRect" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Scrollbar" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>
-	</assembly>
-	<assembly fullname="com.unity.multiplayer-hlapi.Runtime">
-		<type fullname="UnityEngine.Networking.NetworkCallbacks" preserve="nothing"/>
 	</assembly>
 </linker>

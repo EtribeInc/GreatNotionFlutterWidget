@@ -47,9 +47,6 @@ __attribute__ ((visibility("default")))
 - (void)runUIApplicationMainWithArgc:(int)argc argv:(char*[])argv;
 - (void)runEmbeddedWithArgc:(int)argc argv:(char*[])argv appLaunchOpts:(NSDictionary*)appLaunchOpts;
 
-// Added by https://github.com/juicycleff/flutter-unity-view-widget
-- (void)frameworkWarmup:(int)argc argv:(char*[])argv;
-
 - (void)unloadApplication;
 - (void)quitApplication:(int)exitCode;
 
