@@ -31,7 +31,7 @@ The release is based on git tags
       flutter_unity_widget:
         git:
             url: https://github.com/EtribeInc/GreatNotionFlutterWidget
-            ref: v1.0.0
+            ref: v1.1.0
     ```
 
 ### Setup iOS
@@ -91,6 +91,5 @@ plugins.each { name, path ->
 }
 ```
 <br />
-
 
 Now you can run your build
