@@ -7,7 +7,7 @@
         $ git submodule init 
     ```
 2. Open the project in path (`unity/GreatNotionAR`) in the unity app
-3. In unity from the file menu, select `Flutter/Export Android Plugin` for Android export and `Flutter/Export iOS Plugin`.
+3. In unity from the file menu, select `💚 Etribe/Flutter/Export Android` for Android export and `💚 Etribe/Flutter/Export iOS`.
 4. Finally run this command in the soot of the repository
     ```bash
         $ sh build-ios.sh
