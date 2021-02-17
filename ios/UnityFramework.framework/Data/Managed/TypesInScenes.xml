@@ -49,78 +49,27 @@
 		<type fullname="UnityEngine.Light" preserve="nothing"/>
 		<type fullname="UnityEngine.Mesh" preserve="nothing"/>
 		<type fullname="UnityEngine.MeshFilter" preserve="nothing"/>
-		<type fullname="UnityEngine.Animations.LookAtConstraint" preserve="nothing"/>
-		<type fullname="UnityEngine.Animations.ParentConstraint" preserve="nothing"/>
-		<type fullname="UnityEngine.AudioHighPassFilter" preserve="nothing"/>
-		<type fullname="UnityEngine.Avatar" preserve="nothing"/>
-		<type fullname="UnityEngine.Audio.AudioMixerGroup" preserve="nothing"/>
-		<type fullname="UnityEngine.Audio.AudioMixerSnapshot" preserve="nothing"/>
-		<type fullname="UnityEngine.Audio.AudioMixer" preserve="nothing"/>
-		<type fullname="UnityEngine.AudioClip" preserve="nothing"/>
-		<type fullname="UnityEngine.BoxCollider" preserve="nothing"/>
-		<type fullname="UnityEngine.SphereCollider" preserve="nothing"/>
-		<type fullname="UnityEngine.CharacterJoint" preserve="nothing"/>
-		<type fullname="UnityEngine.ParticleSystem" preserve="nothing"/>
-		<type fullname="UnityEngine.LightProbes" preserve="nothing"/>
-		<type fullname="UnityEngine.Rigidbody" preserve="nothing"/>
-		<type fullname="UnityEngine.Joint" preserve="nothing"/>
-		<type fullname="UnityEngine.Cubemap" preserve="nothing"/>
-		<type fullname="UnityEngine.Skybox" preserve="nothing"/>
-		<type fullname="UnityEngine.ParticleSystemRenderer" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="ARBaseUI" preserve="nothing"/>
 		<type fullname="ARFeatheredPlaneMeshVisualizer" preserve="nothing"/>
 		<type fullname="ARSceneManager" preserve="nothing"/>
-		<type fullname="AmplitudeVisualizer" preserve="nothing"/>
-		<type fullname="AnimateJr" preserve="nothing"/>
-		<type fullname="AudioSpectrum" preserve="nothing"/>
-		<type fullname="AudioSyncMouthOpen" preserve="nothing"/>
-		<type fullname="Character" preserve="nothing"/>
-		<type fullname="CharacterAccessoryUI" preserve="nothing"/>
-		<type fullname="CharacterViewerApp" preserve="nothing"/>
-		<type fullname="ClimbIdleState" preserve="nothing"/>
-		<type fullname="FIMSpace.FLook.FLookAnimator" preserve="nothing"/>
 		<type fullname="FadePlaneOnBoundaryChange" preserve="nothing"/>
 		<type fullname="FlutterApp" preserve="nothing"/>
 		<type fullname="FlutterBridge" preserve="nothing"/>
-		<type fullname="GroundCollider" preserve="nothing"/>
-		<type fullname="HangOn" preserve="nothing"/>
-		<type fullname="Lean.Touch.LeanPinchScale" preserve="nothing"/>
-		<type fullname="Lean.Touch.LeanTouch" preserve="nothing"/>
-		<type fullname="LightEstimation" preserve="nothing"/>
-		<type fullname="MainCamFollower" preserve="nothing"/>
-		<type fullname="Pixelplacement.Spline" preserve="nothing"/>
 		<type fullname="Pixelplacement.SplineAnchor" preserve="nothing"/>
-		<type fullname="Pixelplacement.SplineRenderer" preserve="nothing"/>
 		<type fullname="Pixelplacement.SplineTangent" preserve="nothing"/>
 		<type fullname="PlaceOnPlane" preserve="nothing"/>
 		<type fullname="PlaneDetectionController" preserve="nothing"/>
-		<type fullname="Superstar" preserve="nothing"/>
-		<type fullname="SuperstarCamera" preserve="nothing"/>
-		<type fullname="SuperstarGame" preserve="nothing"/>
-		<type fullname="TreeBranch" preserve="nothing"/>
-		<type fullname="TreeSection" preserve="nothing"/>
 		<type fullname="VideoRecorder" preserve="nothing"/>
-		<type fullname="VoiceboxAnimatorState" preserve="nothing"/>
-		<type fullname="VoiceboxApp" preserve="nothing"/>
-		<type fullname="VoiceboxRecordButton" preserve="nothing"/>
-		<type fullname="Widowmaker" preserve="nothing"/>
-		<type fullname="WidowmakerManager" preserve="nothing"/>
-		<type fullname="WidowmakerParent" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Audiobread">
-		<type fullname="HearXR.Audiobread.Audiobread" preserve="nothing"/>
 		<type fullname="HearXR.Audiobread.AudiobreadSource" preserve="nothing"/>
 		<type fullname="HearXR.Audiobread.BuiltInData" preserve="nothing"/>
 		<type fullname="HearXR.Audiobread.BuiltInSoundEvent" preserve="nothing"/>
 		<type fullname="HearXR.Audiobread.BuiltInSoundEventSet" preserve="nothing"/>
 		<type fullname="HearXR.Audiobread.BuiltInSoundPropertySet" preserve="nothing"/>
-		<type fullname="HearXR.Audiobread.CustomSoundEvent" preserve="nothing"/>
 		<type fullname="HearXR.Audiobread.FloatSoundProperty" preserve="nothing"/>
-		<type fullname="HearXR.Audiobread.Parameter" preserve="nothing"/>
-		<type fullname="HearXR.Audiobread.SimpleSoundDefinition" preserve="nothing"/>
-		<type fullname="HearXR.Audiobread.SoundEventReceiver" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
 		<type fullname="TMPro.TMP_FontAsset" preserve="nothing"/>
@@ -153,18 +102,12 @@
 	</assembly>
 	<assembly fullname="UnityEngine.UI">
 		<type fullname="UnityEngine.EventSystems.EventSystem" preserve="nothing"/>
-		<type fullname="UnityEngine.EventSystems.EventTrigger" preserve="nothing"/>
 		<type fullname="UnityEngine.EventSystems.StandaloneInputModule" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Button" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.CanvasScaler" preserve="nothing"/>
-		<type fullname="UnityEngine.UI.ContentSizeFitter" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.GraphicRaycaster" preserve="nothing"/>
-		<type fullname="UnityEngine.UI.HorizontalLayoutGroup" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
-		<type fullname="UnityEngine.UI.Mask" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.RawImage" preserve="nothing"/>
-		<type fullname="UnityEngine.UI.ScrollRect" preserve="nothing"/>
-		<type fullname="UnityEngine.UI.Scrollbar" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>
 	</assembly>
 </linker>

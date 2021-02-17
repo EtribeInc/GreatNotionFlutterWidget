@@ -7,7 +7,7 @@
         $ git submodule init 
     ```
 2. Open the project in path (`unity/GreatNotionAR`) in the unity app
-3. In unity from the file menu, select `Flutter/Export Android Plugin` for Andorid export and `Flutter/Export iOS Plugin`.
+3. In unity from the file menu, select `Flutter/Export Android Plugin` for Android export and `Flutter/Export iOS Plugin`.
 4. Finally run this command in the soot of the repository
     ```bash
         $ sh build-ios.sh
@@ -31,7 +31,7 @@ The release is based on git tags
       flutter_unity_widget:
         git:
             url: https://github.com/EtribeInc/GreatNotionFlutterWidget
-            ref: v1.1.0
+            ref: v1.2.0
     ```
 
 ### Setup iOS
