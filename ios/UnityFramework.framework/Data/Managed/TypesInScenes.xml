@@ -54,6 +54,8 @@
 		<type fullname="ARBaseUI" preserve="nothing"/>
 		<type fullname="ARFeatheredPlaneMeshVisualizer" preserve="nothing"/>
 		<type fullname="ARSceneManager" preserve="nothing"/>
+		<type fullname="CharacterIdleState" preserve="nothing"/>
+		<type fullname="ClimbIdleState" preserve="nothing"/>
 		<type fullname="FadePlaneOnBoundaryChange" preserve="nothing"/>
 		<type fullname="FlutterApp" preserve="nothing"/>
 		<type fullname="FlutterBridge" preserve="nothing"/>
