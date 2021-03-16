@@ -558,6 +558,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "ExitCanvas",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "FadePlaneOnBoundaryChange",
             "moduleName": "",
             "usedInScenes": []
@@ -607,7 +614,35 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "TreeBranch",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "TreeSection",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "VideoRecorder",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Widowmaker",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "WidowmakerParent",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -649,7 +684,28 @@
         {
             "managedAssemblyName": "Audiobread.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "HearXR.Audiobread.CustomSoundEvent",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Audiobread.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "HearXR.Audiobread.FloatSoundProperty",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Audiobread.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "HearXR.Audiobread.Parameter",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Audiobread.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "HearXR.Audiobread.SimpleSoundDefinition",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -839,6 +895,13 @@
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Text",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "com.unity.multiplayer-hlapi.Runtime.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Networking.NetworkCallbacks",
             "moduleName": "",
             "usedInScenes": []
         }
