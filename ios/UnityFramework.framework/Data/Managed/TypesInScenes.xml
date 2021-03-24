@@ -72,6 +72,7 @@
 		<type fullname="HearXR.Audiobread.BuiltInSoundEventSet" preserve="nothing"/>
 		<type fullname="HearXR.Audiobread.BuiltInSoundPropertySet" preserve="nothing"/>
 		<type fullname="HearXR.Audiobread.FloatSoundProperty" preserve="nothing"/>
+		<type fullname="HearXR.Audiobread.SimpleSoundDefinition" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
 		<type fullname="TMPro.TMP_FontAsset" preserve="nothing"/>
