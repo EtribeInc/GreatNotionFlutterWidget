@@ -544,20 +544,6 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "CharacterIdleState",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "ClimbIdleState",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
             "fullManagedTypeName": "FadePlaneOnBoundaryChange",
             "moduleName": "",
             "usedInScenes": []
@@ -650,13 +636,6 @@
             "managedAssemblyName": "Audiobread.dll",
             "nativeClass": "",
             "fullManagedTypeName": "HearXR.Audiobread.FloatSoundProperty",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Audiobread.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "HearXR.Audiobread.SimpleSoundDefinition",
             "moduleName": "",
             "usedInScenes": []
         },
