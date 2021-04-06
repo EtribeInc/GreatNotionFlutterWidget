@@ -36,7 +36,7 @@ xcodebuild archive\
            -scheme $SCHEME_NAME\
            -sdk iphoneos\
            -archivePath $BUILD/Release-iphoneos.xcarchive\
-            ENABLE_BITCODE=NO\
+            ENABLE_BITCODE=YES\
     | xcpretty
 
 #echo "### Copying framework files"

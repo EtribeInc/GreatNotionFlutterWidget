@@ -53,9 +53,9 @@ class UnityPlayerUtils {
                     } catch (e: Exception) {
                     }
 
+                    addUnityViewToBackground(activity)
                     // start unity
                     if (!reInitialize) {
-                        addUnityViewToBackground(activity)
                         unityPlayer!!.windowFocusChanged(true)
                         unityPlayer!!.requestFocus()
                         unityPlayer!!.resume()
@@ -169,9 +169,18 @@ class UnityPlayerUtils {
             if (unityPlayer!!.parent != null) {
                 (unityPlayer!!.parent as ViewGroup).removeView(unityPlayer)
             }
+
+            Log.i(LOG_TAG, "**********************************")
+            Log.i(LOG_TAG, unityPlayer!!.z.toString());
+            Log.i(LOG_TAG, "**********************************")
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 unityPlayer!!.z = -1f
             }
+
+            Log.i(LOG_TAG, "**********************************")
+            Log.i(LOG_TAG, unityPlayer!!.z.toString())
+            Log.i(LOG_TAG, "**********************************")
             val layoutParams = ViewGroup.LayoutParams(1, 1)
             activity.addContentView(unityPlayer, layoutParams)
             isUnityInBackground = true

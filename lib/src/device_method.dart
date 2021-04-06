@@ -110,13 +110,24 @@ class MethodChannelUnityViewFlutter extends UnityViewFlutterPlatform {
 
   @override
   Widget buildView(
-    Map<String, dynamic> creationParams,
-    Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
-    PlatformViewCreatedCallback onPlatformViewCreated,
-  ) {
-    final String _viewType = "plugin.xraph.com/unity_view";
+      Map<String, dynamic> creationParams,
+      Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
+      PlatformViewCreatedCallback onPlatformViewCreated,
+      bool useAndroidView) {
+    final String _viewType = 'plugin.xraph.com/unity_view';
 
     if (defaultTargetPlatform == TargetPlatform.android) {
+      if (useAndroidView) {
+        return AndroidView(
+          viewType: _viewType,
+          onPlatformViewCreated: onPlatformViewCreated,
+          gestureRecognizers: gestureRecognizers,
+          hitTestBehavior: PlatformViewHitTestBehavior.opaque,
+          creationParams: creationParams,
+          creationParamsCodec: StandardMessageCodec(),
+        );
+      }
+
       return PlatformViewLink(
         viewType: _viewType,
         surfaceFactory:

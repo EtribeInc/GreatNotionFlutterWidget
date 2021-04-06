@@ -1,11 +1,13 @@
 package com.xraph.plugin.flutter_unity_widget
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.os.Looper
 import androidx.lifecycle.DefaultLifecycleObserver
 import com.unity3d.player.IUnityPlayerLifecycleEvents
@@ -16,7 +18,6 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.platform.PlatformView
 import java.lang.Exception
-
 
 class FlutterUnityWidgetController(
         id: Int,
@@ -33,6 +34,7 @@ class FlutterUnityWidgetController(
         UnityEventListener,
         IUnityPlayerLifecycleEvents {
 
+    private val LOG_TAG = "UnityPlayerUtils"
     private var lifecycleProvider: LifecycleProvider
 
     private val methodChannel: MethodChannel
@@ -77,6 +79,7 @@ class FlutterUnityWidgetController(
         return unityView
     }
 
+    @SuppressLint("NewApi")
     private fun getUnityView(): UnityView? {
         val view = UnityView.getInstance(context)
         if (UnityPlayerUtils.isUnityLoaded) {
@@ -84,6 +87,10 @@ class FlutterUnityWidgetController(
         } else {
             createPlayer(view, false)
         }
+
+        Log.i(LOG_TAG, "****************getUnityView******************")
+        Log.i(LOG_TAG, this.id.toString())
+        Log.i(LOG_TAG, "****************getUnityView******************")
         return view
     }
 
@@ -127,6 +134,11 @@ class FlutterUnityWidgetController(
                 val methodName: String = methodCall.argument<String>("methodName").toString()
                 val message: String = methodCall.argument<String>("message").toString()
 
+                Log.i(LOG_TAG, "****************************************************")
+                Log.i(LOG_TAG, gameObject)
+                Log.i(LOG_TAG, methodName)
+                Log.i(LOG_TAG, message)
+                Log.i(LOG_TAG, "****************************************************")
                 UnityPlayerUtils.postMessage(gameObject, methodName, message)
                 result.success(true)
             }
@@ -232,7 +244,7 @@ class FlutterUnityWidgetController(
                 })
             }
         } catch (e: Exception) {
-            if (methodChannelResult != null) {
+            if (methodChannelResult != null){
                 methodChannelResult!!.success(false)
                 methodChannelResult = null
             }
